@@ -1,0 +1,529 @@
+% Auteur : Steve Prud’Homme
+% Cette oeuvre, création, site ou texte est sous licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International. Pour accéder à une copie de cette licence, merci de vous rendre à l'adresse suivante 
+% http://creativecommons.org/licenses/by-nc-sa/4.0/ ou envoyez un courrier à 
+% Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+\documentclass[aspectratio=169]{beamer}
+\usepackage{color}
+\usepackage{beamerthemesplit} % new 
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{french}
+% Natlib pour la bibliographie
+\usepackage{natbib}
+\usepackage{url}
+\usetikzlibrary{mindmap,shadows,shapes,backgrounds}
+\usepackage[T1]{fontenc}
+\setbeamertemplate{bibliography item}[text]
+\usepackage{multicol}
+
+
+\definecolor{MightySlate}{RGB}{85,98,112}
+\definecolor{Pacifica}{RGB}{78,205,196}
+\definecolor{AppleChic}{RGB}{199,244,100}
+\definecolor{CheeryPink}{RGB}{255,107,107}
+
+\setbeamercolor{titlelike}{parent=structure}
+\setbeamerfont*{title}{size=\huge}
+\setbeamercolor{title}{bg=MightySlate, fg=white}
+\setbeamercolor{author}{bg=Pacifica, fg=white}
+\setbeamercolor{institute}{bg=AppleChic, fg=black}
+\setbeamercolor{date}{bg=CheeryPink, fg=white}
+
+\definecolor{DTUred}{RGB}{178,20,20}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=MightySlate}
+
+
+\begin{document}
+	\title{L'évaluation en ligne} 
+	\author{Steve Prud'Homme} 
+	\institute{GTN-Québec - Commission scolaire de Laval} 
+	\date{\today} 
+
+	
+	\usebackgroundtemplate{%
+  \includegraphics[width=\paperwidth,height=\paperheight]{sommaire.png}} 
+	
+	\frame{\titlepage} 
+	\usebackgroundtemplate{ } 
+	\section{Sommaire} 
+		\begin{frame}
+			Cette présentation vise à : 
+			\frametitle{Sommaire}
+			\begin {itemize}
+				\item Effecturer un court état des lieux de l'évaluation en ligne et de ses pratiques en formation professionnelle
+				\item Familiariser l'auditoire avec l'évaluation en ligne 
+				\item Démontrer qu'il est pertinent d'adopter des pratiques harmonisées en ce qui concerne l'évaluation en ligne
+				\item Promouvoir l'idée qu'il est essentiel que le MEES établisse des lignes directrices rapidement en ce qui concerne l'évaluation en ligne
+
+			\end{itemize}
+		\end{frame}
+	\frame[allowframebreaks]{\frametitle{Ordre du jour}\tableofcontents}
+
+
+	\section{Contexte} 
+		\begin{frame}[allowframebreaks]
+			\frametitle{Le contexte de la formation à distance et en ligne}
+			Le \citet{OLC2015a}, conclus dans une grande étude étatsunienne qu'en 2015\footnote{Infographie : \url {http://www.onlinelearningsurvey.com/reports/2015SurveyInfo.pdf} } :
+			\begin {itemize}
+				\item Il y a eu une hausse d'inscription en formation à distance de 3,9 \% par rapport à l'année dernière
+				\item Plus du quart des étudiants (28 \%) prend des cours en formation à distance (un  total de 5 828 826 étudiants, une hausse annuelle de 217,275)  pour une population de 321 773 631 (soit 1,8  \%).
+				\item Le pourcentage de directeurs universitaires qui considèrent les résultats de l'apprentissage dans l'éducation en ligne comme étant égaux ou supérieurs à ceux de l'enseignement en face à face est désormais de 71,4 \%.
+				\item Seuls 29,1 \% des dirigeants universitaires rapportent que leur faculté reconnaît la « valeur et la légitimité de l'éducation en ligne ». Parmi les écoles ayant les inscriptions les plus lointaines, 60,1 \% rapportent la reconnaissance de la formation en ligne par la faculté tandis que seules 11,6 \% des écoles avec des inscriptions locales le font. 
+			\end{itemize}
+			\framebreak
+			Selon la \citet{sofad2015a} en 2014 : 
+			\begin {itemize}
+				\item Le total des inscriptions à des cours à distance (formations générales et professionnelles) a augmenté de 3,6 \% et atteint un nouveau sommet à 56 608.
+				\item Le nombre d’élèves concernés par ces cours a augmenté quant à lui de 3 \% pour atteindre un nouveau sommet à 29 386 pour une population, selon \citet{is2015a}, de 8 263 600 (soit 0,36 \%)
+				\item La croissance est particulièrement forte en formation professionnelle à distance avec des augmentations de 8 \% du nombre d’inscriptions et de 10 \% pour le nombre d’élèves, pour atteindre de nouveaux sommets dans un cas comme dans l’autre (10 209 et 3 374)
+			\end{itemize}
+		\end{frame}
+		
+		\subsection{La question de l'évaluation en ligne} 
+		\begin{frame}
+			\frametitle{La question l'évaluation en ligne}
+			\begin {itemize}
+				\item Très peu discutée, selon \citet{audet2011a} qui cite \citet{buzzetto2006a} : « si le terme fait maintenant partie du vocabulaire courant de la formation, le concept d'évaluation électronique ou en ligne est encore relativement peu répandu »
+				\item Il existe des désaccords à ce sujet
+				
+			\end{itemize}
+		\end{frame}
+		
+	\subsection{L'aspect séducteur} 
+		\begin{frame}
+			\frametitle{L'aspect séducteur de l'évaluation en ligne\citep{Lamontagne2013}}
+			\begin {itemize}
+				\item Gestion facilitée
+				\item Économie
+				\item Standardisation
+				\item Personnalisation
+				\item Contrôle
+				\item Rapidité
+				\item Flexibilité
+				\item Qualité
+			\end{itemize}
+		\end{frame}
+	
+	\subsection{Résultats} 
+		\begin{frame}
+			\frametitle{Des résultats ?}
+			\citet {Stansbury2013C}, déclare en citant Scoot Smith, directeur TI à la Mooresville Graded School District (N.C), comme nous le rapporte \citet{Lamontagne2013} que :
+			\begin {itemize}
+				\item Les résultats aux tests d'état finaux connaissent des augmentations significatives (+20 \% sur 6 ans)
+				\item Un taux de poursuite aux études supérieures de + 40 \%.
+				\item Une augmentation de 16 \% dans la réussite globale
+			\end{itemize}
+			Selon \citet{Lamontagne2013}, ces améliorations sont dues à la systématisation des suivis et de l'attention accordée à chacun.
+			\par \alert{Un changement induit par l'utilisation de la formation en ligne}
+		\end{frame}
+	
+	\section{Facteurs} 
+		
+		\subsection{Les facteurs liés à la formation ou à l'aisance TIC} 
+			\begin{frame}[allowframebreaks]
+			 	\frametitle{Les facteurs liés à la formation ou à l'aisance TIC \citep{NorthCarolina2013} et \citep{Lamontagne2013}}
+				\begin {itemize}
+					\item Préparer le personnel enseignant et administratif
+						\begin {itemize}
+							\item Comprend la formation des responsables TI
+							\item Comprend la formation des administrateurs et gestionnaires de tests à tous les niveaux (local, régional, provincial)
+						\end{itemize}	
+					\item Préparer les élèves ou étudiants
+						\begin {itemize}
+							\item Former les étudiants aux outils.
+						\end{itemize}
+					\item Selon \citet{Stansbury2013A} : « \textit{Without a basic technical foundation and statewide support, you can kiss online assessments goodbye.}». \citet{Stansbury2013A} cite Patches Hill, directeur des TI du Delaware Indiant River School District (IRSD) : « \textit{You need your state-level infrastructure implementation, state assessment implementation [summative standardization], and personnalized learning [formative statardization]. This is a multistep process and it can't be done instantly.}»
+					
+				\end{itemize}
+			\end{frame}
+			
+		\subsection{Les facteurs pédagogiques} 
+			\begin{frame}[allowframebreaks]
+			 	\frametitle{Les facteurs pédagogiques \citet{audet2011a}}
+				\begin {itemize}
+					\item Les objectifs d'apprentissage
+						\begin {itemize}
+							\item Les outils du Web facilitent l'identification de ces objectifs, leur mise en relation et leur partage entre concepteurs
+							\item Ils soutiennent leur diffusion aux étudiants et clarifient ainsi les attentes de l'évaluation
+						\end{itemize}
+					\item Les compétences évaluées
+						\begin {itemize}
+							\item Le Web rend justement beaucoup plus simple la réalisation d'activités d'évaluation visant la démonstration de compétences diversifiées, incluant par exemple la créativité ou la collaboration
+							\item On vise des compétences de plus haut niveau que la simple mémorisation 
+						\end{itemize}
+					\item La finalité des évaluations
+						\begin {itemize}
+							\item L'évaluation par internet contribue de façon importante à cette tendance vers une évaluation plus formative et plus formatrice.
+							\item Elle facilite également l'administration des tests diagnostiques et l'utilisation à plusieurs fins d'un même ensemble de contenus d'évaluation.					
+						\end{itemize}
+					\item La rétroaction
+						\begin {itemize}
+							\item Les outils liés à l'évaluation par Internet facilitent et accélèrent la transmission de la rétroaction
+							\item Selon \citet{whitelock2006a}, cité par \citet{audet2011a}, cette rapidité de rétroaction est déterminante dans le développement de l'évaluation en ligne, car elle permet :
+								\begin {itemize}
+									\item L'automatisation
+									\item La remise immédiate à l'apprenant
+									\item La réutilisation
+								\end{itemize}
+							\item Elle permet aussi de rendre l'évaluation plus captivante parce qu'elle permet d'y insérer des éléments multimédias ou des hyperliens.
+						\end{itemize}
+					\framebreak 
+					\item Les activités réalisées
+						\begin {itemize}
+							\item La réalisation d'activité d'évaluation :
+								\begin {itemize}
+									\item Plus variées
+									\item Plus authentiques
+									\item Plus collaboratives
+								\end{itemize}
+							\item Presque que toutes les formes de démonstrations de compétences (exemple : les wikis)
+							\item Il est facile de combiner des évaluations alternatives avec des tests formatifs ou sommatifs automatisés (diversité versus tâche de l'enseignant)										
+						\end{itemize}
+					\framebreak 
+					\item Fréquence de la mesure
+						\begin {itemize}
+							\item Selon \citet{audet2011a} : « Le Web vient alors supporter la compilation et l'analyse des divers résultats obtenus »
+						\end{itemize}
+					\framebreak 
+					\item Les évaluateurs
+						\begin {itemize}
+							\item Les outils d'évaluation en ligne facilitent particulièrement les formes alternatives d'évaluation en permettant :
+								\begin {itemize}
+									\item L'anonymat
+									\item La pondération complexe
+									\item La compilation des résultats
+									\item La discussion
+									\item La négociation
+									\item La conservation des traces
+								\end{itemize}
+						\end{itemize}
+					\framebreak
+					\item Les critères d'évaluation
+						\begin {itemize}		
+							\item L'utilisation de critères détaillés facilite par la compilation efficace de résultats
+							\item L'élimination des contraintes liées à la diffusion des documents (diffusion des critères préalables et des résultats liés)
+						\end{itemize}
+					\item La portée. Selon \citet{jisc2007a}, cité par  \citet{audet2011a} :
+						\begin {itemize}		
+							\item  L'évaluation en ligne est souvent restreinte aux évaluations à portée faible\footnote{Habituellement formative et ses résultats demeurent locaux} et moyenne\footnote{Peuvent avoir des résultats locaux ou nationaux, mais ceux-ci ne sont pas déterminants dans la vie de la personne évaluée}.
+							\item De plus en plus d'organisations l'envisagent dans des contextes de certification professionnelle, où l'impact d'un succès ou d'un échec est très important.
+						\end{itemize}
+					\item Selon \citet{audet2011a}, nous allons vers un alignement :
+						\begin {itemize}		
+							\item Selon \citet{astin1992a}, cité par \citet{audet2011a}, : « L'évaluation des la plus efficace quand elle reflète une compréhension de l'apprentissage comme multidimensionnel, intégrée et démontrée par une performance dans le temps», qui se traduit selon \citet{angelo1996a}, en quatre composante :
+								\begin {itemize}
+									\item La multiplicité des méthodes
+									\item Les dimensions de l'apprentissage
+									\item Les évaluateurs
+									\item Les moments d'évaluation
+								\end{itemize}
+								\citet{audet2011a}, déclare : « L'évaluation en ligne facilite la mise en place des ces nombreux paramètres et le suivi qu'ils nécessitent », en fonction de l'intention pédagogique du concepteur.
+						\end{itemize}
+				\end{itemize}
+			\end{frame}
+			
+			\subsubsection{Le 5 grands principes de l'évaluation au service de l'apprentissage \citep{black2004}} 
+				\begin{frame}
+			 		\frametitle{Le 5 grands principes de l'évaluation au service de l'apprentissage\citep{black2004}}
+					\begin {itemize}
+						\item Fournir aux élèves des appréciations efficaces
+						\item Une implication active des élèves dans leur propre apprentissage
+						\item L'adaptation de l'enseignement afin qu'il prenne en compte les résultats de l'évaluation
+						\item La prise en compte de l'influence considérable del'évaluation sur la motivation et l'estime de soi des élèves. Ces deux points ayant une influence critique sur les capacités d'apprentissage.
+						\item Le besoin qu'ont les élèves d'être en mesure de s'autoévaluer et de comprendre comment s'améliorer
+					\end{itemize}
+				\end{frame}
+				
+				\subsubsection{Comment concrétiser les 5 grands principes de l'évaluation au service de l'apprentissage \citep{Missaoui2013}et \citep{itslearning2012a} }
+				\begin{frame}
+			 		\frametitle{Comment concrétiser les 5 grands principes de l'évaluation au service de l'apprentissage \citep{Missaoui2013} et \citep{itslearning2012a}}
+					\begin {itemize}
+						\item Négocier les objectifs d'apprentissage
+						\item Combiner la classe réelle à la classe virtuelle (quand c'est possible)
+						\item Utiliser un environnement numérique d'apprentissage pour :
+							\begin {itemize}
+								\item Dépôt de ressource
+								\item Activités avec des feed-back réguliers
+								\item 
+							\end{itemize}
+						
+					\end{itemize}
+				\end{frame}
+			
+			
+		\subsection{Les facteurs technologiques} 
+			\begin{frame}
+			 	\frametitle{Les facteurs technologiques}
+				\begin {itemize}
+					\item Selon la \citet{NorthCarolina2013}, citée par \citet{Lamontagne2013} il faut :
+						\begin {itemize}
+							\item Déternir un réseau développé. Selon \citet{Stansbury2013B}, une couverture complète du WiFi est nécessaire.
+							\item Diposer d'une large bande passante
+							\item Posséder des équipements informatiques performants
+						\end{itemize} 
+				\end{itemize}
+			\end{frame}
+			
+		\subsection{Les facteurs économiques} 
+			\begin{frame}
+			 	\frametitle{Les facteurs économiques}
+				Selon la \citet{NorthCarolina2013} :
+				\begin {itemize}
+					\item L'évaluation en ligne mène à des réductions de coût au niveau national et local
+					\item L'évaluation en ligne offre un temps réponse plus rapide pour les enseignants et les élèves / étudiants
+				\end{itemize}
+			\end{frame}
+			
+		\subsection{Les facteurs sociaux} 
+			\begin{frame}
+			 	\frametitle{Les facteurs sociaux}
+				\begin {itemize}
+					\item Selon le \citet{NorthCarolina2013}, il y a une amélioration de l'accessibilité par l'usage d'accommodements pour l'élève ou l'étudiant (ex.: audio, vidéo, couleur arrière-plan alternative,etc.) 
+					
+				\end{itemize}
+			\end{frame}
+			
+			\subsection{Les facteurs liés aux processus et au contrôle de la qualité \citep{authority2014a}} 
+			\begin{frame}
+			 	\frametitle{Les facteurs liés aux processus et au contrôle de la qualités}
+				Selon la \citet{authority2014a} :
+				\begin {itemize}
+					\item Le processus doit démontré la cohérence et être fiable
+					\item Le personnel doit avoir les compétences appropriées pour gérer et exécuter ces processus.
+					\item Les organisations doivent être imputables en ce qui concerne la qualité de ces processus devant des organismes indépendants
+					\item Une certaine flexibilité doit être maintenue pour que ces processus et compétences soient capables d'évoluer en fonction des améliorations technologiques .
+					
+				\end{itemize}
+			\end{frame}
+			
+			
+	\section{Pratiques} 
+			
+		\subsection{Au Québec en formation professionnelle} 
+			\begin{frame}
+				  \frametitle{Au Québec en formation professionnelle}
+				  \begin {itemize}
+					\item Melançon (2015), déclare qu'en formation professionnelle, le mode d’identification peut varier selon le type d’apprentissage (compétence de participation, compétence de comportement incluant une évaluation théorique ou pratique). 
+					\item La Direction de la sanction des études a été récemment interpellée sur l’évaluation des compétences sans présence physique de l’élève en salle d’examen (évaluation à l’aide d’Internet)
+				\end{itemize}
+			\end{frame}
+			
+		\subsubsection{Prérequis} 
+				\begin{frame}
+					\frametitle{Prérequis}
+				 	
+				 	\begin {itemize}
+						\item Vérification de l’identité : utilisation de la photographie de l’étudiant.
+						\item Respect des règles d’administration
+							\begin {itemize}
+								\item Voir et parler avec la personne
+								\item S’assurer de l’identité de la personne
+								\item Questionner le candidat afin de s’assurer que les travaux ont été effectué.
+								\item Se filmer et envoyer le tout avec une signature et une date.
+							\end{itemize}
+						\item Contrôler l’accès au matériel
+						\item Veiller à la validité du résultat
+					\end{itemize}
+				\end{frame}
+				
+		\subsubsection{Centre sectoriel des plastiques} 
+				\begin{frame}[allowframebreaks]
+					\frametitle{Centre sectoriel des plastiques}
+				 	\includegraphics [height=4cm]{plasturgie.png}				 	
+				 	\framebreak
+				 	\par Utilisation d’un logiciel de contrôle à distance et d’un poste d’examen dédié disponible à distance
+				 	
+				 	\begin {itemize}
+						\item Utilisation de la plateforme TICFP (CAMILLO) pour l’assignation des horaires d’examen.
+						\item L’enseignant se connecte au poste de l’apprenant (situé sur le lieu de travaille en ATE) à l’aide du logiciel Teamviewer
+						\item Lorsque l’enseignant a le contrôle du poste de l’apprenant, il se connecte sur un poste d’examen situé au Centre sectoriel des plastiques.
+						\item Sur cette ordinateur il y a un fichier Microsoft Word en mode formulaire protégé que l’élève rempli.
+						\item L’utilisation d’un questionnaire sur la plateforme TICFP (CAMILLIO) est aussi possible sur le poste d’examen.
+						\item Utilisation Webcam et micro.
+					\end{itemize}
+					
+					
+				\end{frame}
+		
+		\subsection{Dans le monde} 
+						
+			\subsubsection{Caroline du Nord} 
+				\begin{frame}[allowframebreaks]
+					  \frametitle{Caroline du Nord\citep{NorthCarolina2013}}
+				 	\begin {itemize}
+						\item 2005 : premiers tests en ligne
+						\item 2006-2007 :  l'examen EOC  (End-of-course) en physique était disponible en ligne
+						\item 2007-2008 les examens EOC  (End-of-course) de toutes les disciplines sont disponibles en ligne
+						\item 2011-2012, 19 \% des examens sont administrés en ligne
+					\end{itemize}
+					\par Le NCDPI a amorcé une réforme numérique afin d'offrir un accès aux examens à travers l'état, de produire des élèves / étudiants compétitifs et de développer des pratiques technopédagogiques abordables et pérennes. 
+					\par Ils ont publié un guide des bonnes pratiques.
+					\par Ce guide répond aux questions sur :
+					\begin {itemize}
+						\item Le calendrier des épreuves
+						\item La planification financière
+						\item Les préalables techniques afin d'effectuer la transition vers le numérique
+						
+						
+					\end{itemize}
+					\par Il propose des études de cas
+				\end{frame}
+		
+		
+			\subsubsection{Le reste des États-Unis} 
+				\begin{frame}
+					  \frametitle{Le reste des États-Unis \citep{NorthCarolina2013}}
+				 	\begin {itemize}
+						\item Plusieurs états ont déjà un système d'évaluation en ligne d'état
+							\begin {itemize}
+								\item Virginie (en 64 \% de toutes les évaluations sont administrés en ligne)
+								\item Orégon
+							\end{itemize}
+						\item D'autres états sont en transition vers l'évaluation en ligne simultanément à l'adoption de \textit{Common Core State Standards}
+						\item 17 états sont membre du \textit{Smarter Balanced Assessment Consortium} qui a créé un système d'évaluation en ligne qui est arrimé au \textit{Common Core State Strandards} (CCSS). Ce consortium est situé à l'UCLA’s Graduate School of Education \& Information Studies (GSE\&IS)
+					\end{itemize}					
+				\end{frame}
+				
+			\subsubsection{Royaume-Uni} 
+				\begin{frame}
+					  \frametitle{Royaume-Uni \citep{authority2014a}}
+				 	\begin {itemize}
+						\item \textit{British Standards Institution code of practice for the use of information technology (IT) in the Delivery if assessments}\footnote{BS 7988:2002}. Ce code est devenu un standard international\footnote{ISO/IEC 23988:2007}
+						\item Une grande place est accordée au portfolio numérique.
+						\item Une certification créditée pour le personnel impliqué, prestation de service d'évaluation en ligne existe.
+						\item 
+					\end{itemize}					
+				\end{frame}
+				
+			\subsection{Documents de référence importants} 
+				\begin{frame}[allowframebreaks]
+					  \frametitle{Documents de référence importants}
+				 		\begin{description}[Second Item]
+							\item[Québec] Les pratiques et défis de l'évaluation en ligne \citep{audet2011a}
+							\item[États-Unis] Online Assessments Best Practices Guide \citep{NorthCarolina2013}
+							\item[Angleterre] Effective Practive with e-Assessment. An overview of technologies, policies and pactice in further and higher education \citep{jisc2007a}
+							\item[Écosse] E-assesment. Guide to effective practice \citep{authority2014a}
+							\framebreak
+							\item[ISO] Revised comments on e-Assessment \citep{ISO2008a}
+					\end{description}
+				\end{frame}
+				
+	\section{La question du plagiat} 
+		\begin{frame}
+			 % \frametitle{}
+			% \begin {itemize}
+				% \item 
+				% \item 
+			%\end{itemize}
+		\end{frame}
+		
+	\section{Vers un cadre de référence national} 
+		\begin{frame}
+			 % \frametitle{}
+			% \begin {itemize}
+				% \item 
+				% \item 
+			%\end{itemize}
+		\end{frame}
+		
+		\subsection{Une nécessité économique \citep{Dubreucq2011}} 
+			\begin{frame}[allowframebreaks]
+			 	\frametitle{Une nécessité économique \citep{Dubreucq2011}}
+				\begin {itemize}
+					\item Plusieurs institutions adoptent les évaluations en ligne
+					\item Les environnements numériques d'apprentissage intègrent des dispositifs d'évaluation en ligne
+					\item Il y a donc une grande pression sur les organismes (uniformisation)
+					\item L'uniformisation crée des tensions et sont loin des exigences d'un bon enseignement.
+					\framebreak
+					\item Selon plusieurs auteurs \footnote{\citet{audet2011a}, \citet{dirks1998a} et \citet{becta2006a}}, il faut également tenir compte des pressions pour l'amélioration de la productivité. 
+						\begin {itemize}
+							\item Les budgets sont limités
+							\item Le nombre d'étudiants en hausse
+							\item Les besoins augmentent
+							\item L'évaluation prend 35 \% du temps de l'enseignant expérimenté pour 56 \% du temps pour les nouveaux enseignants
+						\end{itemize}		
+				\end{itemize}
+				\framebreak
+				La plupart des systèmes éducatifs convergent vers l'évaluation en ligne.
+				\citet{Dubreucq2011}, déclare : « Qui touche aux évaluations touche à l'ensemble d'un système d'enseignement et d'apprentissage ».
+			\end{frame}
+			
+		\subsection{Des outils pour les professionnels de l'éducation\citep{Dubreucq2011}} 
+			\begin{frame}
+			 	% \frametitle{Des outils pour les professionnels de l'éducation\citep{Dubreucq2011}}
+				% \begin {itemize}
+					% \item 
+					% \item 
+				%\end{itemize}
+			\end{frame}
+			
+			\subsubsection{Des outils de planification \citep{Dubreucq2011}} 
+				\begin{frame}
+			 		\frametitle{Des outils de planification \citep{Dubreucq2011}}
+					Un cadre de référence sur l'évaluation en ligne donnerait des outils aux professionnels de l'éducation pour bien planifier l'évaluation en ligne qui facilite :
+					\begin {itemize}
+						\item La formulation des objectifs de la formation
+						\item L'identification des types de compétences à développer
+					\end{itemize}
+					Ces éléments sont au coeur de la formation.
+				\end{frame}
+			
+			\subsubsection{Des outils de diversification\citep{Dubreucq2011}} 
+				\begin{frame}
+			 		\frametitle{Des outils de diversification\citep{Dubreucq2011}}
+			 		Un cadre de référence sur l'évaluation en ligne permettrait aux professionnels de l'éducation d'utiliser l'évaluation en ligne qui permet : 
+					\begin {itemize}
+						\item Des évaluations plus larges
+						\item La mise en oeuvre de compétences diversifiées (ex.: créativité, collaboration)
+						\item La réflexion
+					\end{itemize}
+				\end{frame}
+				
+			\subsubsection{Des outils de rétroaction\citep{Dubreucq2011}} 
+				\begin{frame}
+			 		\frametitle{Des outils de rétroaction\citep{Dubreucq2011}}
+					Un cadre de référence sur l'évaluation en ligne permettrait aux professionnels de l'éducation de : 
+					\begin {itemize}
+						\item Normaliser les corrections
+						\item Individualiser les corrections
+						\item Offrir une plus grande automie à l'élève ou l'étudiant
+						\item D'économiser du temps sur les évaluations individuelles
+					\end{itemize}
+				\end{frame}
+				
+			\subsubsection{Une réflexion sur la fraude \citep{Dubreucq2011}} 
+				\begin{frame}[allowframebreaks]
+			 		\frametitle{Une réflexion sur la fraude \citep{Dubreucq2011}}
+			 		Un cadre de référence sur l'évaluation en ligne permettrait de donner au professionnel de l'éducation des lignes directrices en : 
+					\begin {itemize}
+						\item Décrivant les causes, l'évolution et la croissance du phénomène, particulièrement en ligne.
+						\item Développant les compétences informationnelles à ce sujet.
+						\item Donnant selon \citet{bergadaa2008relation}, les outils aux professionnels de l'éducation afin de permettre  :
+							\begin {itemize}
+								\item d'améliorer les compétences en recherche documentaire
+								\item de développer un sens critique dans le traitement de l'information 
+							\end{itemize}
+						\item Repenser l'évaluation comme un moyen de mesurer des habiletés de plus haut niveau que la simple mémorisation de savoirs. C'est-à-dire :
+							\begin {itemize}
+								\item L'analyse
+								\item La synthèse 
+								\item La confrontation de documents
+							\end{itemize}
+						\item Favoriser les évaluations plus variées et plus continues
+								
+					\end{itemize}
+				\end{frame}
+			
+
+
+\section{Bibliographie}
+\subsection{Bibliographie}
+\frame[allowframebreaks]{\frametitle{Bibliographie}
+
+\bibliographystyle{apalike}
+\bibliography{bibliographie} %bibtex file name without .bib extension
+}
+\end{document}
+
